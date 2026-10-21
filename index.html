@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Appointment Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Patient Appointment Form</h2>
+    
+    <form id="appointmentForm">
+      <!-- Patient ID -->
+      <div class="form-group">
+        <label for="patientId">Patient ID:</label>
+        <input type="text" id="patientId" name="patientId" placeholder="Enter Patient ID" required>
+      </div>
+
+      <!-- Patient Name -->
+      <div class="form-group">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" placeholder="Enter Patient Name" required>
+      </div>
+
+      <!-- Department -->
+      <div class="form-group">
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+          <option value="">-- Select Department --</option>
+          <option value="Cardiology">Cardiology</option>
+          <option value="Neurology">Neurology</option>
+          <option value="Orthopedics">Orthopedics</option>
+          <option value="Pediatrics">Pediatrics</option>
+          <option value="General Medicine">General Medicine</option>
+          <option value="Dermatology">Dermatology</option>
+        </select>
+      </div>
+
+      <!-- Appointment Date -->
+      <div class="form-group">
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="button-group">
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="reset" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <!-- Success Message & Display Section -->
+    <div id="resultMessage" class="result" style="display: none;"></div>
+
+    <div id="appointmentDetails" class="details-section" style="display: none;">
+      <h3>Submitted Appointment Details</h3>
+      <table id="detailsTable">
+        <tr>
+          <th>Field</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td><strong>Patient ID</strong></td>
+          <td id="displayId"></td>
+        </tr>
+        <tr>
+          <td><strong>Patient Name</strong></td>
+          <td id="displayName"></td>
+        </tr>
+        <tr>
+          <td><strong>Department</strong></td>
+          <td id="displayDept"></td>
+        </tr>
+        <tr>
+          <td><strong>Appointment Date</strong></td>
+          <td id="displayDate"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
